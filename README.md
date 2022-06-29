@@ -1,4 +1,3 @@
-# Front-End-Technologies
 git clone https://github.com/shaiknoureen/Front-End-Technologies.git
 git init/cd filename/
 git status
