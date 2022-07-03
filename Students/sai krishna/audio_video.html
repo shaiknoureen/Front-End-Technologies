@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>audio</title>
+    </head>
+    <body>
+        <h1>AUDIO</h1>
+        <p>Lets see the audio and video feature updated in HTML 5</p>
+        <audio controls>
+            <source src="sample.mp3" type = "audio/mp3">
+        </audio>
+        <video controls>
+            <source src="sample.mp4" type = "video/mp4">
+        </video>
+        <h1>The canvas element</h1>
+        <canvas id = "mycanvas">Browser</canvas>
+        <script>
+            var a = document.getElementById("mycanvas");
+            var b = a.getContext("2d");
+            b.fillStyle = "blue";
+            b.fillRect(10,10,80,100);
+        </script>
+    </body>
+</html>
