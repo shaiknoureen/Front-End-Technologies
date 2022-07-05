@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute</title>
+</head>
+<body>
+
+    <form>
+        <label for="fname">First name</label>
+        <input type="text" name="fname" id="fname"> <br>
+
+        <label for="lname">Last name</label>
+        <input type="text" name="lname" id="lname" value="read only" readonly> <br>
+
+        <label for="lname">My name</label>
+        <input type="text" name="lname" id="lname" value="disabled" disabled> <br>
+        
+        <label for="lname">User name</label>
+        <input type="text" name="uname" id="uname" value="abcdef" maxlength="10"> <br>
+
+        <label for="country_code">Country code:</label>
+  <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br>
+
+     <input type="submit" value="submit" > <br> <br>
+
+  <label for="Phone number">Mobile</label>
+  <input type="tel" id="phone" name="phone" placeholder="111-1111-111" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" title="10 digit number"><br>
+
+  <input type="submit" value="submit" > <br> <br>
+
+
+    </form>
+    
+
+
+
+
+</body>
+</html>
