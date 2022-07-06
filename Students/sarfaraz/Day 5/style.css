@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(32, 64, 93);
+}
+h1 {
+    color: blanchedalmond;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p {
+    font-size: larger;
+    color: aquamarine;
+}

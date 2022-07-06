@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Page</title>
+</head>
+
+<body>
+    <div>
+        <p>This page should've consists of contact us details such as email, phone, address but there isn't any. Just go
+            to navbar and surf as you like. Or else there is a button provided below, by clicking on that you can view
+            my location. Obviously you cannot see my location, it'll just show your location :).</p>
+    </div>
+    <div>
+        <button onclick="getLocation()">Click for location to contact us</button>
+        <p id="loc"></p>
+        <script>
+            var doc = document.getElementById("loc");
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    doc.innerHTML = "Geo-Location is not supported in this browser";
+                }
+            }
+
+            function showPosition(position) {
+                doc.innerHTML = "Latitude: " + position.coords.latitude + "<br> Longitude: " + position.coords.longitude;
+            }
+        </script>
+    </div>
+</body>
+
+</html>
