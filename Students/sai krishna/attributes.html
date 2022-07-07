@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<for>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for = "fname">FIRST NAME:</label><br>
+        <input type = "text" id= "fname" value = "sai"><br>
+
+        <label for = "lname">LAST NAME:</label><br>
+        <input type = "text" id= "lname" value = "krishna" disabled><br>
+
+        <label for = "username">USER NAME:</label><br>
+        <input type = "text" id= "uname" maxlength = "5"><br>
+
+        <label for = "sname">SUR NAME:</label><br>
+        <input type = "text" id= "sname" value = "Chowla" readonly><br>
+        
+        <label for = "country">Country Code:</label><br>
+        <input type = "text" id ="countryCode" name = "contryCode" pattern="[A-Z]{3}" title = "three letter code"><br>
+
+        <label for = "mobile">Mobile Number:</label><br>
+        <input type = "tel" id ="mob" name = "mob" pattern="91-[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter the mobile number (91-123-345-8975)"><br>
+        <input type = "submit">
+    </form>
+</body>
+</html>
