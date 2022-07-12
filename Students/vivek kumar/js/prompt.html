@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>WINDOWS PROMPT BOX</h2>
+
+    <button type="button" onclick="myLogic()">CLICK ME</button>
+    <button type="button" onclick="alert('hello \n how are you?')">TRY ME</button>
+    <p id="demo1"> </p>
+
+    <script>
+        function myLogic() {
+            let text;
+            let person = prompt("please enter your name:", "Shaik Noureen");
+            if (person == null || person == "") {
+                text = "user cancelled the prompt.";
+            } else {
+                text = " hello     " + person + " ! how are you ";
+            }
+            document.getElementById("demo1").innerHTML = text;
+
+        }
+    </script>
+
+</body>
+
+</html>
