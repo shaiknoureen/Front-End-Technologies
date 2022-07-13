@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+
+    <h2> Basic Syntax</h2>
+    <p>This is addition.</p>
+    <p id="demo">This is one</p>
+    <p>This is Subtraction.</p>
+    <p id="demo1"></p>
+    <p>This is multiplication.</p>
+    <p id="demo2"></p>
+    <p>This is Divison.</p>
+    <p id="demo3"></p>
+
+    <h2>On click</h2>
+    <button type="button" onclick="func()">Click</button>
+    <p id="demo4"></p>
+
+    <button type="button" onclick="func11()">Click</button>
+    <p id="demo5"></p>
+
+    <h2>WINDOWS PROMPT BOX</h2>
+
+    <button type="button" onclick="myLogic()">CLICK ME</button>
+    <br><br>
+    <button type="button" onclick="alert('hello \n how are you?')">TRY ME</button>
+    <p id="dem1"> </p>
+
+
+<h2>Functions</h2>
+    <p>Function multiplication. </p>
+    <p id="emo"></p>
+    <p>addition.</p>
+    <p id="emo1">This is one</p>
+    <p> Subtraction.</p>
+    <p id="emo2"></p>
+    <p>Divison.</p>
+    <p id="emo3"></p>
+    <p>Constructor</p>
+    <p id="emo5"></p>
+
+    <h2>JSON</h2>
+    <p>Object</p>
+    <p id="a"></p>
+    <p>max number</p>
+    <p id="b"></p>
+    <p>All sum</p>
+    <p id="c"></p>
+
+    <h2>DATEMETHODS</h2>
+    <p id="date"></p>
+    <p id="date1"></p>
+    <p id="date2"></p>
+    <p id="date3"></p>
+    <p id="date4"></p>
+    <p id="date5"></p>
+    <p id="date6"></p>
+
+
+
+    <h2>Sliciing</h2>
+    <p id="aa"></p>
+    <p id="bb"></p>
+    <p id="cc"></p>
+
+
+    <h2>Replace</h2>
+    <button onclick="replace()"> Click It</button>
+    <p id="dd">This is replaceable</p>
+
+    <p>Uppercase</p>
+    <button onclick="upper()"> Click It</button>
+    <p id="ee">convert to uppercase</p>
+
+    <script>
+        let x = 5;
+        let y = 11;
+        let z = x + y;
+
+        document.getElementById("demo").innerHTML = z;
+
+        x = 15;
+        y = 11;
+        z = x - y;
+
+        document.getElementById("demo1").innerHTML = z;
+
+        x = 15;
+        y = 6;
+        z = x * y;
+
+        document.getElementById("demo2").innerHTML = z;
+
+        x = 15;
+        y = 5;
+        z = x / y;
+
+        document.getElementById("demo3").innerHTML = z;
+
+        function func() {
+            document.getElementById("demo4").innerHTML = "Hello world";
+        }
+
+        function func11() {
+            var a = 5;
+            if (a == 5) {
+                document.getElementById("demo5").innerHTML = "A is 5";
+            } else {
+                document.getElementById("demo5").innerHTML = "no its not.";
+            }
+        }
+
+        function myLogic() {
+            let text;
+            let person = prompt("please enter your name:", "Vivek Kumar");
+            if (person == null || person == "") {
+                text = "user cancelled the prompt.";
+            } else {
+                text = " hello     " + person + " ! how are you ";
+            }
+            document.getElementById("dem1").innerHTML = text;
+
+        }
+
+        x = fun(10, 5);
+        document.getElementById("emo").innerHTML = x;
+        function fun(a, b) {
+            return a * b;
+        }
+
+        x = fun1(10, 5);
+        document.getElementById("emo1").innerHTML = x;
+        function fun1(a, b) {
+            return a + b;
+        }
+
+        x = fun2(10, 5);
+        document.getElementById("emo2").innerHTML = x;
+        function fun2(a, b) {
+            return a - b;
+        }
+
+        x = fun3(10, 5);
+        document.getElementById("emo3").innerHTML = x;
+        function fun3(a, b) {
+            return a / b;
+        }
+
+        const q = new Function("a", "b", 'return a * b');
+        document.getElementById("emo5").innerHTML = q(20, 30);
+
+        const obj = {
+            first: "Vivek",
+            last: "Kumar",
+            full: function () {
+                return this.first + this.last;
+            }
+        }
+
+        document.getElementById("a").innerHTML = obj.full();
+        const arr = [10, 5, 9, 41, 6];
+        function maximum() {
+            let max = -Infinity;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        document.getElementById("b").innerHTML = maximum(arr);
+
+        function sumall() {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+
+            }
+            return sum;
+        }
+        document.getElementById("c").innerHTML = sumall();
+
+
+        const days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+        const d = new Date();
+        let day = days[d.getDay()];
+        document.getElementById("date").innerHTML = d.getTime();
+        document.getElementById("date1").innerHTML = d.getFullYear();
+        document.getElementById("date2").innerHTML = d.getMonth() + 1;
+        document.getElementById("date3").innerHTML = d.getMinutes();
+        document.getElementById("date4").innerHTML = d.getDate();
+        document.getElementById("date5").innerHTML = d.getDay();
+        document.getElementById("date6").innerHTML = day;
+
+        var text = "abcdjwdandladnfadsdbnn";
+        var str = "one ,two, three, four";
+        document.getElementById("aa").innerHTML = text.length;
+        document.getElementById("bb").innerHTML = str.slice(4, 9);
+        document.getElementById("cc").innerHTML = str.slice(-13, -7);
+        function replace() {
+            let t = document.getElementById("dd").innerHTML;
+            document.getElementById("dd").innerHTML = t.replace("replaceable", "replaced");
+        }
+
+        function upper() {
+            let t = document.getElementById("ee").innerHTML;
+            document.getElementById("ee").innerHTML = t.toUpperCase();
+        }
+
+    </script>
+
+
+</body>
+
+</html>

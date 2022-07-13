@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Function multiplication. </p>
+    <p id="demo"></p>
+    <p>addition.</p>
+    <p id="demo1">This is one</p>
+    <p> Subtraction.</p>
+    <p id="demo2"></p>
+    <p>Divison.</p>
+    <p id="demo3"></p>
+    <p>Constructor</p>
+    <p id="demo5"></p>
+
+    <Script>
+        var x = fun(10, 5);
+        document.getElementById("demo").innerHTML = x;
+        function fun(a, b) {
+            return a * b;
+        }
+
+        var x = fun1(10, 5);
+        document.getElementById("demo1").innerHTML = x;
+        function fun1(a, b) {
+            return a + b;
+        }
+
+        var x = fun2(10, 5);
+        document.getElementById("demo2").innerHTML = x;
+        function fun2(a, b) {
+            return a - b;
+        }
+
+        var x = fun3(10, 5);
+        document.getElementById("demo3").innerHTML = x;
+        function fun3(a, b) {
+            return a / b;
+        }
+
+        // const x = function (a, b) {
+        //     return a * b;
+        // }
+        // document.getElementById("demo4").innerHTML = x(10, 20);
+
+        const z = new Function("a", "b", 'return a * b');
+        document.getElementById("demo5").innerHTML = z(20, 30);
+
+    </Script>
+</body>
+
+</html>

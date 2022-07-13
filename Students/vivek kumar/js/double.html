@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Double click</h2>
+    <button ondblclick="click()">Double Click</button>
+    <p id="a"></p>
+
+    <h2>Focus</h2>
+    <p>to see difference</p>
+    <input type="text" id="b" value="text-field">
+    <button onclick="get()">Get Focus</button>
+    <button onclick="lose()">Lose Focus</button>
+
+    <script>
+        // document.getElementById("a").ondblclickHTMLfunction(){ click() };
+
+        // function click() {
+        //     document.getElementById("a").innerHTML = "Hello World!";
+        // }
+
+        function get() {
+            document.getElementById("b").focus();
+        }
+
+        function lose() {
+            document.getElementById("b").blur();
+        }
+
+    </script>
+
+
+</body>
+
+</html>

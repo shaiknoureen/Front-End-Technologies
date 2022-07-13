@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Sliciing</p>
+    <p id="a"></p>
+    <p id="b"></p>
+    <p id="c"></p>
+   
+
+    <p>Replace</p>
+    <button onclick="replace()"> Click It</button>
+    <p id="d">This is replaceable</p>
+
+    <p>Uppercase</p>
+    <button onclick="upper()"> Click It</button>
+    <p id="e">convert to uppercase</p>
+
+    <script>
+        var text = "abcdjwdandladnfadsdbnn";
+        var str = "one ,two, three, four";
+        document.getElementById("a").innerHTML = text.length;
+        document.getElementById("b").innerHTML = str.slice(4, 9);
+        document.getElementById("c").innerHTML = str.slice(-13, -7);
+        function replace() {
+            let t = document.getElementById("d").innerHTML;
+            document.getElementById("d").innerHTML = t.replace("replaceable", "replaced");
+        }
+
+        function upper() {
+            let t = document.getElementById("e").innerHTML;
+            document.getElementById("e").innerHTML = t.toUpperCase();
+        }
+
+    </script>
+
+
+</body>
+
+</html>

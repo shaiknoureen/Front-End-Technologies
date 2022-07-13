@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="a"></p>
+    <p>max number</p>
+    <p id="b"></p>
+    <p id="c"></p>
+
+    <script>
+
+        const obj = {
+            first: "Vivek",
+            last: "Kumar",
+            full: function () {
+                return this.first + this.last;
+            }
+        }
+
+        document.getElementById("a").innerHTML = obj.full();
+        const arr=[10, 5, 9, 41, 6];
+        function maximum(){
+            let max = -Infinity;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        document.getElementById("b").innerHTML = maximum(arr);
+
+        function sumall(){
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum +=arr[i];
+                
+            }
+            return sum;
+        }
+        document.getElementById("c").innerHTML = sumall();
+
+
+    </script>
+
+
+
+</body>
+
+</html>
