@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <button type="button" onclick="func()">Click</button>
+    <p id="demo1"></p>
+
+    <button type="button" onclick="fun()">Click</button>
+    <p id="demo2"></p>
+
+
+    <Script>
+
+        function func(){
+            document.getElementById("demo1").innerHTML = "Hello world";
+        }
+
+        function fun(){
+            var a=5;
+            if(a==5){
+                document.getElementById("demo2").innerHTML = "A is 5";
+            }else{
+                document.getElementById("demo1").innerHTML = "no its not.";
+            }
+        }
+    </Script>
+
+
+    
+</body>
+</html>

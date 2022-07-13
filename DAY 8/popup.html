@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>javascript</title>
+</head>
+<body>
+<h2>LET'S SEE THE POP-UP BOX</h2>
+<button type ="button" onclick="myLogic()">CLICK ME</button>
+<p id = "demo1"> </p>
+
+<script>
+function myLogic(){
+    var text;
+    if(confirm("press a button")){
+        text = "you pressed ok!";
+    }else {
+        text = "you pressed cancel"
+    }
+document.getElementById("demo1").innerHTML = "text";
+}
+</script>
+
+</body>
+</html>

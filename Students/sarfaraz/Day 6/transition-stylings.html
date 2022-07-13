@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Stylings</title>
+    <style>
+        div {
+            width: 99px;
+            height: 133px;
+            background-color: blanchedalmond;
+            transition: width 4s;
+        }
+
+        div:hover {
+            width: 399px;
+            animation-name: cc;
+            animation-duration: 3s;
+        }
+
+        @keyframes cc {
+            from {
+                background-color: blanchedalmond;
+            }
+
+            to {
+                background-color: darkmagenta;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Transition Stylings</h1>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum cumque laborum, saepe, eligendi aspernatur
+            doloremque accusamus quo nihil assumenda ab, incidunt facilis dolor sit. Possimus quos perferendis
+            recusandae magnam eum!</p>
+    </div>
+</body>
+
+</html>
