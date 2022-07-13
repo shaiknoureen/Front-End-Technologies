@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+        <h2>It is about popup</h2>
+        <button type ="button" onclick="myFunction()">Click Me</button>
+        <p id = "demo"></p>
+        <script>
+            function myFunction() {
+                var text;
+                if(confirm("press a button")){
+                    text = "your are pressed";
+                }
+                else{
+                    text = "your are cancelled"
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+        </script>
+    </body>
+</html>

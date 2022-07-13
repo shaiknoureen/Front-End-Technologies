@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+        <h2>It is about prompt box</h2>
+        <button type ="button" onclick="myFunction()">Click Me</button>
+        <button type ="button" onclick="alert('Hey You Missed it')">Try Me </button>
+        <p id = "demo"></p>
+        <script>
+            function myFunction() {
+                let text;
+                let person = prompt("Please Enter your name:","Sai Krishna");
+                if(person == null || person == ""){
+                    text = "user cancelled"
+                }
+                else{
+                    text = " hello  " + person + " How are you";
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+        </script>
+    </body>
+</html>
