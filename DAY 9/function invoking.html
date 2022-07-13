@@ -1,0 +1,16 @@
+<html>
+<body>
+<h2> FUNCTION INVOKING</h2>
+<p>here we can perform multiple operations with the help of return</p>
+<p id = "demo"></p>
+<script>
+const myObject = {
+    firstName : "Shaik",
+    lastName : "Noureen",
+    fullName : function() {return this.firstName + " "+ this.lastName;}
+}
+
+document.getElementById("demo").innerHTML=myObject.fullName();
+</script>
+</body>
+</html>

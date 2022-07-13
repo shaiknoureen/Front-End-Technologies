@@ -1,0 +1,18 @@
+<html>
+<body>
+<h2> FUNCTION ARGUMENT OBJECT</h2>
+<p>here we can perform multiple operations with the help of return</p>
+<p id = "demo"></p>
+<script>
+function sumAll(){
+    let sum = 0;
+    for(let i = 0;i<arguments.length;i++){
+        sum += arguments[i];
+       
+    }
+return sum;
+}
+document.getElementById("demo").innerHTML=sumAll(10,20,30,40,50,60,70,80,90,100);
+</script>
+</body>
+</html>

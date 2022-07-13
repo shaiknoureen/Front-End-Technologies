@@ -1,0 +1,20 @@
+<html>
+<body>
+<h2> Date Methods</h2>
+<p>going to see different methods used in the date()</p>
+<p id = "demo"></p>
+<script>
+const days = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+const d = new Date();
+let day = days[d.getDay()];
+document.getElementById("demo").innerHTML=d.getTime();
+document.getElementById("demo").innerHTML=d.getFullYear();
+document.getElementById("demo").innerHTML=d.getMonth() + 1;
+document.getElementById("demo").innerHTML=d.getMinutes();
+document.getElementById("demo").innerHTML=d.getDate();
+document.getElementById("demo").innerHTML=d.getHours();
+document.getElementById("demo").innerHTML=day;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1> focus()&blur()</h1>
+<h2>let's see the focus and blur methods</h2>
+<p>this is a dummy pargraph added in the page to see the difference.</p>
+<input type = "text" id = "mytext" value = "A text field">
+<button onclick="getfocus()">Get focus </button>
+<button onclick="losefocus()">Lose focus </button>
+<script>
+function getfocus() {
+    document.getElementById("mytext").focus();
+}
+function losefocus() {
+    document.getElementById("mytext").blur();
+}
+</script>
+</body>
+</html>

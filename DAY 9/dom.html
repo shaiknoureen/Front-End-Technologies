@@ -1,0 +1,17 @@
+<html>
+<body>
+<h2>onclick</h2>
+<p>This is a dummy paragraph added in the page to see the difference</p>
+<p class="master2">Javascript</p>
+<p class="master2">ReactJs</p>
+<h1 class = "master2" >i want a job</h1>
+<button id = "btn">click me</button>
+<script>
+const btn = document.getElementById('btn')
+    btn.addEventListener('click',function master(){
+        var master = document.getElementsByClassName("master2");
+        master[2].innerHTML='i need a job';
+    })
+</script>
+</body>
+</html>
