@@ -1,0 +1,219 @@
+<hmtl>
+    <head>
+       <title>JAVASCRIPT</title>
+    </head>
+    <body>
+        <h2>The first addition</h2>
+        <p id="demo">This is the one</p>
+        <script>
+            let x=5;
+            let y=2;
+            let z=x+y;
+            
+            document.getElementById("demo").innerHTML=z;
+            
+            
+        </script>
+        <h2>The subtraction</h2>
+        <p id="demo1">This is subtraction</p>
+        <script>
+            let a=5;
+            let b=2;
+            let c=a-b;
+            document.getElementById("demo1").innerHTML=c;
+            
+        </script>
+        <h2>The Multiplication</h2>
+        <p id="demo2">This is subtraction</p>
+        <script>
+            let l=5;
+            let k=2;
+            let i=l*k;
+            document.getElementById("demo2").innerHTML=i;
+            </script>
+        <h2>DIVISION</h2>
+        <p id="demo3">This is subtraction</p>
+            <script>
+                let u=5;
+                let o=2;
+                let f=u/o;
+                document.getElementById("demo3").innerHTML=f;
+                </script>
+            <h2>REMAINDER</h2>
+            <p id="demo4"></p>
+                <script>
+                    let m=5;
+                    let w=2;
+                    let d=u%o;
+                    document.getElementById("demo4").innerHTML=d;
+                    </script>
+                    <h2>Popup</h2>
+            <button type="button" onclick="myFunction()">CLICK ME</button>
+            <button type="button" onclick="alert('hello \n how are you')">TRY ME</button>
+            <p id="demo5"> </p>
+            <script>
+                function myFunction(){
+                    let text;
+                    let person= prompt("please enter your name:","likki");
+                    if(person == null|| person== " "){
+                        text= "user cancelled the prompt";
+    
+                    }
+                    else {
+                        text="helo    "    +  person  + " ! How  r u ";
+                    }
+                document.getElementById("demo5").innerHTML=text;
+                }
+                </script>
+                
+                <h2>windows prompt</h2>
+                <button type="button" onclick="myLogic()">clickme</button>
+                <p id="demo6"></p>
+                <script>
+                   function myLogic(){
+                    let text;
+                    let person=prompt("please enter your name","sai Likhitha");
+                    if(person == null|| person == " "){
+                        text="user cancelled the prompt"
+                    }
+                    else{
+                     text="hello" + person +"! how r u??"
+                    }
+                   
+                    document.getElementById("demo6").innerHTML=text;
+                }
+                </script>
+                <h2>FUNCTION DECLARATION</h2>
+            
+                <p id="demo7"></p>
+                <script>
+                    var p= declaration(6,4);
+                    document.getElementById("demo7").innerHTML=p;
+                    function declaration(a,b){
+                     return a+b
+                
+                     
+                    }
+        
+       </script>
+       <h2>FUNCTIONSUM</h2>
+       <p id ="demo9"></p>
+       <script>
+           function sumall(){
+               let sum=0;
+               for (let i = 0;i<arguments.length;i++)
+                   {
+                   sum=sum+arguments[i];
+               }
+       
+           return sum;}
+           document.getElementById("demo9").innerHTML=sumall(4,7,6,8,12);
+       </script>
+       <h1>functionworking</h1>
+       <p id="demo10"></p>
+<script>
+  const myObject ={
+      firstName  : "Sai",
+      lastName: "Likhitha",
+      fullName:function() {
+          return this.firstName + " " + this.lastName;
+      }
+  }
+  document.getElementById("demo10").innerHTML=myObject.fullName();
+</script>
+<h2>DATEMETHODS</h2>
+<p id ="demo12"></p>
+<script>
+    const days=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+
+    const h= new Date();
+    let day= days[h.getDay()];   
+    document.getElementById("demo12").innerHTML=h.getTime();
+    document.getElementById("demo12").innerHTML=h.getFullYear();
+    document.getElementById("demo12").innerHTML=h.getMonth() + 1;
+    document.getElementById("demo12").innerHTML=h.getMinutes();
+    document.getElementById("demo12").innerHTML=h.getDate();
+    document.getElementById("demo12").innerHTML=day;
+    </script>
+    <p id="likhitha"></p>
+    <script>
+   document.getElementById("likhitha").innerHTML=h.getFullYear();
+    </script>
+ <p id="li"></p>
+ <script>
+document.getElementById("li").innerHTML=h.getTime();
+ </script>
+ <p id="lik"></p>
+ <script>
+document.getElementById("lik").innerHTML=h.getMinutes();
+ </script>
+
+
+    
+    
+       <h2>Function Expression</h2>
+       <p id="d"></p>
+       <script>
+           const A=function(a,b){
+               return a*b
+
+           }
+           document.getElementById("d").innerHTML=A(10,20);
+       </script>
+                
+                <h2>FUNCTION ARGUMENT  MAX</h2>
+                <p id ="o"></p>
+                <script>
+                    function findmax(){
+                        let max = -Infinity;
+                        for (let i = 0;i<arguments.length;i++){
+                            if(arguments[i]>max){
+                
+                            
+                            max=arguments[i];
+                        }
+                
+                    }return max;}
+                    document.getElementById("o").innerHTML=findmax(4,7,6,8,12);
+                </script>  
+                <h1>lower to upppercase</h1>
+                <button onclick="uppercase()">CLICK</button></p>
+                <p id="likki">please visit my class</p>
+                <script>
+                    function uppercase(){
+                    let text=document.getElementById("likki").innerHTML;
+                    document.getElementById("likki").innerHTML=text.toUpperCase();
+                }
+                </script>  
+                <h1>upper to lowercase</h1>
+                <button onclick="lowercase()">CLICK</button></p>
+                <p id="mo">PLEASE VISIT MY CLASS</p>
+                <script>
+                    
+                    function lowercase(){
+                    let text=document.getElementById("mo").innerHTML;
+                    document.getElementById("mo").innerHTML=text.toLowerCase();
+                }</script>
+                <h1>string methods</h1>
+                <p id="id">please visit my class</p>
+        <button type="button"onclick="replace()">CLICK HERE</button>"
+        <script>
+            function replace(){
+           let text=document.getElementById("id").innerHTML;
+    
+        document.getElementById("id").innerHTML=text.replace(" my class","intellipaat class");
+
+             } </script>
+             <h1>concat</h1>
+            
+            <p id="l"></p>
+            <script>
+                let ab="Hello"
+                let bc="students"
+                let  cd =ab.concat("",bc)
+                document.getElementById("l").innerHTML=cd;
+            
+            </script>
+           
+    </body>
+</hmtl>
