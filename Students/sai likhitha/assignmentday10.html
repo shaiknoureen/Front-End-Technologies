@@ -1,0 +1,241 @@
+<hmtl>
+    <head>
+       <title>JAVASCRIPT</title>
+    </head>
+    <body>
+        
+            
+        <h2>FUNCTION DECLARATION</h2>
+            
+                <p id="demo7"></p>
+                <script>
+                    var p= declaration(6,4);
+                    document.getElementById("demo7").innerHTML=p;
+                    function declaration(a,b){
+                     return a*b}
+        
+       </script>
+       <h2>FUNCTIONSUM</h2>
+       <p id ="demo9"></p>
+       <script>
+           function sumall(){
+               let sum=0;
+               for (let i = 0;i<arguments.length;i++)
+                   {
+                   sum=sum+arguments[i];
+               }
+       
+           return sum;}
+           document.getElementById("demo9").innerHTML=sumall(4,7,6,8,12);
+       </script>
+       <h1>functionworking</h1>
+       <p id="demo10"></p>
+<script>
+  const myObject ={
+      firstName  : "Sai",
+      lastName: "Likhitha",
+      fullName:function() {
+          return this.firstName + " " + this.lastName;
+      }
+  }
+  document.getElementById("demo10").innerHTML=myObject.fullName();
+</script>
+<h2>DATEMETHODS</h2>
+<p id ="demo12"></p>
+<script>
+    const days=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+
+    const h= new Date();
+    let day= days[h.getDay()];   
+    document.getElementById("demo12").innerHTML=h.getTime();
+    document.getElementById("demo12").innerHTML=h.getFullYear();
+    document.getElementById("demo12").innerHTML=h.getMonth() + 1;
+    document.getElementById("demo12").innerHTML=h.getMinutes();
+    document.getElementById("demo12").innerHTML=h.getDate();
+    document.getElementById("demo12").innerHTML=day;
+    </script>
+    <p id="likhitha"></p>
+    <script>
+   document.getElementById("likhitha").innerHTML=h.getFullYear();
+    </script>
+ <p id="li"></p>
+ <script>
+document.getElementById("li").innerHTML=h.getTime();
+ </script>
+ <p id="lik"></p>
+ <script>
+document.getElementById("lik").innerHTML=h.getMinutes();
+ </script>
+
+
+    
+    
+       <h2>Function Expression</h2>
+       <p id="d"></p>
+       <script>
+           const A=function(a,b){
+               return a*b
+
+           }
+           document.getElementById("d").innerHTML=A(10,20);
+       </script>
+                
+                <h2>FUNCTION ARGUMENT  MAX</h2>
+                <p id ="o"></p>
+                <script>
+                    function findmax(){
+                        let max = -Infinity;
+                        for (let i = 0;i<arguments.length;i++){
+                            if(arguments[i]>max){
+                
+                            
+                            max=arguments[i];
+                        }
+                
+                    }return max;}
+                    document.getElementById("o").innerHTML=findmax(4,7,6,8,12);
+                </script>  
+                <h1>lower to upppercase</h1>
+                <button onclick="uppercase()">CLICK</button></p>
+                <p id="likki">please visit my class</p>
+                <script>
+                    function uppercase(){
+                    let text=document.getElementById("likki").innerHTML;
+                    document.getElementById("likki").innerHTML=text.toUpperCase();
+                }
+                </script>  
+                <h1>upper to lowercase</h1>
+                <button onclick="lowercase()">CLICK</button></p>
+                <p id="mo">PLEASE VISIT MY CLASS</p>
+                <script>
+                    
+                    function lowercase(){
+                    let text=document.getElementById("mo").innerHTML;
+                    document.getElementById("mo").innerHTML=text.toLowerCase();
+                }</script>
+                <h1>string methods</h1>
+                <p id="id">please visit my class</p>
+        <button type="button"onclick="replace()">CLICK HERE</button>"
+        <script>
+            function replace(){
+           let text=document.getElementById("id").innerHTML;
+    
+        document.getElementById("id").innerHTML=text.replace(" my class","intellipaat class");
+
+             } </script>
+             <h1>concat</h1>
+            
+            <p id="l"></p>
+            <script>
+                let ab="Hello"
+                let bc="students"
+                let  cd =ab.concat("",bc)
+                document.getElementById("l").innerHTML=cd;
+            
+            </script>
+            <img onmouseover="bigImg(this)"onmouseout="normalImg(this)"src="smiley.jfif" alt="smiley"width="32" height="32">
+            <p> In this program if you hover on the image you will see the difference</p>
+    
+            
+            <script>
+             function bigImg(x){
+                x.style.height = "500px";
+                x.style.width="350px"
+             }  
+             function normalImg(x){
+                x.style.height="32px";
+                y.style.width="32px";
+             }
+           </script>
+           
+    </style>
+</head>
+<body>
+
+<div onmousemove="myFunction(event)" onmouseout="clearcoor() "></div>
+<p id="xaxis"></p>
+<script>
+        function myFunction(e) {
+          var x=e.clientX;
+            var y=e.clientY;
+            var coor="coordinates:("+ x +"," + y + ")";
+        document.getElementById("xaxis").innerHTML= coor;}
+        function clearcoor(){
+            document.getElementsById("xaxis").innerHTML="";
+
+        
+
+        }
+        </script>
+        <h2>set time out() </h2>
+        <p>HI LIKHITHA</p>
+        <p id="likhi"></p>
+        <script>
+            const mytimeout =setTimeout(wishes,500);
+            function wishes(){
+                document.getElementById("likhi").innerHTML="all the best";
+            }
+
+        </script>    
+        
+        <h2> validating css using javascript</h2>
+        <p>adding colors to the particular line:</p>
+        <h1 id="id1">JAVASCRIPT</h1>
+        <button type="button" onclick="document.getElementById('id1').style.color='red'">CLICK</button>
+        
+        <p id="inte">"INTELLIPAAT"</p>
+        <p id="intel">"INTELLIPAAT</p>
+        <script>
+        document.getElementById("inte").style.color="red";
+        document.getElementById("intel").style.fontfamily="arier";
+        document.getElementById("intel").style.fontsize="larger";
+        </script>
+        
+        <h2>setInterval() method</h2>
+        <p id="seti">javascript</p>
+        <script>
+        const eleme=document.getElementById("seti");
+        setInterval(function (){element.innerHTML += "Javascript"},100);
+
+            
+        </script>
+        
+        <h2>change event</h2>
+        <p>Drop down for the technologis stack </p>
+        <select id="option" onchange="tech()">
+        <option value="javascript">JAVASCRIPT</option>
+        <option value="HTML">HTML</option>
+        <option value="css">CSS</option>
+        <option value="java">JAVA</option>
+        <option value="python">PYTHON</option>
+        </select>
+        <p id="demo"></p>
+        <script>
+            function tech(){
+               var x= document.getElementById("option").value;
+                document.getElementById("demo").innerHTML="you selected:" + x; 
+            
+            }</script>
+        
+        
+          
+        <h2>keydown</h2>
+        <input type="text"id="fname" onkeydown="bold()">
+        <script>
+    function bold(){
+        alert("you are trying to add text in the field");
+    }
+            
+        </script>
+        <h2>key-up event</h2>
+        <p> if you write something in the field it converts to uppper text.</p>
+        Enter your name : <input type="text" id="name" onkeyup="bold()">
+        <script>
+            function bold(){
+                var x=document.getElementById("name");
+                x.value =x.value.toUpperCase();
+
+            }
+        </script>
+    </body>
+</hmtl>
