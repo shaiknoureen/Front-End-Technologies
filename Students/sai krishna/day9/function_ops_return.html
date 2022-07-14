@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h2>Function Declaration</h2>
+        <p>Here we can perform operations with help of return</p>
+        <p id = "demo"></p>
+        <script>
+            var x = addexample(3,5);
+            var y = subexample(5,3);
+            var z = divexample(4,2);
+            document.getElementById("demo").innerHTML="Addition is " + x+"<br>";
+            document.getElementById("demo").innerHTML += "Subtraction is " + y+"<br>";
+            document.getElementById("demo").innerHTML += "Divisions is " + z;
+            function addexample(a,b){
+                return a+b;
+            }
+            function subexample(a,b){
+                return a-b;
+            }
+            function divexample(a,b){
+                return a/b;
+            }
+        </script>
+    </body>
+</html>
