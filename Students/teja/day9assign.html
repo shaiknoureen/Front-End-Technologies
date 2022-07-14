@@ -1,0 +1,168 @@
+<html>
+    <head></head>
+    <body>
+        <h1>welcome to javascript</h1>
+        <script>
+            let a="teja";
+            let b="golla";
+            let c=a+"  "+b;
+            document.write(c);
+        </script>
+        <h3>behaviour of the code in the function</h3>
+        <p>if i click on the button shoe me the content</p>
+        <button type="button" onclick=myFunction()>click me</button>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <script>
+            function myFunction(){
+                document.getElementById("demo1").innerHTML="hello";
+                document.getElementById("demo2").innerHTML="i am javascript";
+            }
+        </script>
+        <h3> the basic syntax of javascript.this is increment operation</h3>
+        <p id="demo3">this is the one</p>
+        <script>
+            let x=5
+            let y=5
+            let z = x++
+        document.getElementById("demo3").innerHTML=z;
+        </script>
+         <p>the above mentioned paragraph is changed  to new text</p>
+        <h3>let see pop-up box</h3>
+    
+        <button type="button" onclick=myFunction()>click me</button>
+        <p id="demo1"></p>
+        <script>
+            function myFunction(){
+                var text;
+                if(confirm("press a button"))
+                {
+                    text="you pressed ok!"
+                }
+                else{
+                    text="you pressed cancel"
+                }
+                document.getElementById("demo1").innerHTML= text;
+            }
+        </script>
+        <h3>windows prompt</h3>
+        <button type="button" onclick="myLogic()">clickme</button>
+        <p id="demo4"></p>
+        <script>
+           function myLogic(){
+            let text;
+            let person=prompt("please enter your name","teja golla");
+            if(person == null|| person == " "){
+                text="user cancelled the prompt"
+            }
+            else{
+             text=" hello " + person +"! how r u??"
+            }
+           
+            document.getElementById("demo4").innerHTML=text;
+        }
+        </script>
+        <h3>uppercase methods</h3>
+        <p>going to see different methods used i the string</p>
+        <p id="demo5">please visit my class</p>
+        <button onclick="uppercase()">click it</button>
+        <script>
+           let e="Hello";
+           let f="Students";
+           let g=a.concat(b);
+           document.getElementById("demo5").innerHTML=g;
+        </script>
+        <h3>DATE METHODS</h3>
+        <p>going to see different medthosd used in the date()</p>
+        <p id="demo6"></p>
+        <script>
+        const days = ["sunday","monday","tuesday","wednsday","thursday","friday","satursday"];
+        let day=days[d.getDay()];
+        document.getElementById("demo6").innerHTML=day;
+        </script>
+        <h3>FUNCTION constructor</h3>
+        <p>here we can perform multiple operations with the help of return </p>
+        <p id="demo7"></p>
+        <script>
+        const myObject = {
+        fname : "teja",
+        lname : "golla",
+        funame : function(){return this.fname+" "+this.lname;}
+        }
+        document.getElementById("demo7").innerHTML=myObject.funame();
+        </script>
+        <h3>FUNCTION ARGUMENT OBJECT</h3>
+        <p>here we can perform multiple operations with the help of return </p>
+        <p id="demo8"></p>
+        <script>
+        function findmax(){
+            let max=-Infinity;
+            for(let i=0; i<arguments.length;i++){
+                if(arguments[i]>max){
+                    max=arguments[i];
+                }
+            }
+            return max;
+        }
+        document.getElementById("demo8").innerHTML=findmax(4,5,6);
+        </script>
+        <h3>FUNCTION constructor</h3>
+        <p>here we can perform multiple operations with the help of return </p>
+        <p id="demo9"></p>
+        <script>
+            const myFuncton = new Function("a","b" ,"return a*b");
+            document.getElementById("demo9").innerHTML=myFuncton(12,12);
+            </script>
+            <h3>FUNCTION DECLARATION</h3>
+            <p>here we can perform multiple operations with the help of return </p>
+            <p id="demo10"></p>
+            <script>
+                var p = declaration(6,4);
+                document.getElementById("demo10").innerHTML=p;
+                function declaration(a,b){
+                return a+b;
+                }
+                </script>
+            <h3>FUNCTION DECLARATION</h3>
+            <p>here we can perform multiple operations with the help of return </p>
+            <p id="demo11"></p>
+            <script>
+                const q=function(a,b){return a*b;}
+                document.getElementById("demo11").innerHTML=q(10,20);
+                </script>
+            <h3>string methods</h3>
+            <p>going to see different methods used i the string</p>
+            <p id="demo12">please visit my class</p>
+            <button onclick="replace()">click it</button>
+            <script>
+                function replace(){
+                    let text=document.getElementById("demo12").innerHTML;
+                document.getElementById("demo12").innerHTML=text.replace("my class","intellipaat class");
+                }
+            </script>
+        <h3>FUNCTION ARGUMENT OBJECT</h3>
+        <p>here we can perform multiple operations with the help of return </p>
+        <p id="demo13"></p>
+        <script>
+        function sumAll(){
+            let sum=0;
+            for(let i=0; i<arguments.length;i++){
+                    sum += arguments[i];
+            }
+            return sum;
+        }
+        document.getElementById("demo13").innerHTML=sumAll(10,20,30,40,50,60,70,80,90,100);
+        </script>
+         <h3>string methods</h3>
+         <p>going to see different methods used i the string</p>
+         <p id="demo14">Please Visit My Class</p>
+         <button onclick="uppercase()">click it</button>
+         <script>
+             function uppercase(){
+                 let text=document.getElementById("demo14").innerHTML;
+             document.getElementById("demo14").innerHTML=text.toLowerCase();
+             }
+         </script>
+
+    </body>
+</html>
