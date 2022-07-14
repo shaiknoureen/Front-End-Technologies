@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="a">Change to green</p>
+    <!-- <button  type="button" onclick=document.getElementById("a").style.color="green">Click me</button> -->
+    <p>This line should be changed.</p>
+    <p id="color">Color</p>
+    <p id="font">Font</p>
+
+    <h3>The Window Object</h3>
+    <h3>The set Interval</h3>
+
+    <p id="demo1"></p>
+
+    <h3>The Set Timeout</h3>
+    <p id="Timeout"></p>
+
+
+    <script>
+        document.getElementById("color").style.color = "red";
+        document.getElementById("font").style.fontFamily = "Arial";
+        document.getElementById("font").style.fontSize = "large";
+
+        const element = document.getElementById("demo1");
+        setInterval(function () { element.innerHTML += "JS" }, 1000);
+        const my=setTimeout(wish,5000);
+        function wish(){
+            document.getElementById("Timeout").innerHTML="All the Best";
+        }
+
+    </script>
+
+</body>
+
+</html>

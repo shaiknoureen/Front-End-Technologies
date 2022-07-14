@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        div {
+          width: 200px;
+          height: 100px;
+          border: 1px solid black;
+        }
+        </style>
+</head>
+
+<body>
+
+    <h2>Functions</h2>
+    <p>Function multiplication. </p>
+    <p id="emo"></p>
+    <p>addition.</p>
+    <p id="emo1">This is one</p>
+    <p> Subtraction.</p>
+    <p id="emo2"></p>
+    <p>Divison.</p>
+    <p id="emo3"></p>
+    <p>Constructor</p>
+    <p id="emo5"></p>
+
+    <h2>JSON</h2>
+    <p>Object</p>
+    <p id="a"></p>
+    <p>max number</p>
+    <p id="b"></p>
+    <p>All sum</p>
+    <p id="c"></p>
+
+    <h2>DATEMETHODS</h2>
+    <p id="date"></p>
+    <p id="date1"></p>
+    <p id="date2"></p>
+    <p id="date3"></p>
+    <p id="date4"></p>
+    <p id="date5"></p>
+    <p id="date6"></p>
+
+
+
+    <h2>Sliciing</h2>
+    <p id="aa"></p>
+    <p id="bb"></p>
+    <p id="cc"></p>
+
+
+    <h2>Replace</h2>
+    <button onclick="replace()"> Click It</button>
+    <p id="dd">This is replaceable</p>
+
+    <p>Uppercase</p>
+    <button onclick="upper()"> Click It</button>
+    <p id="ee">convert to uppercase</p>
+
+    <h2>Focus</h2>
+    <p>to see difference</p>
+    <input type="text" id="focus" value="text-field">
+    <button onclick="get()">Get Focus</button>
+    <button onclick="lose()">Lose Focus</button>
+
+    <p class="mas"> JS</p>
+    <p class="mas">React</p>
+    <h3 class="mas">I did it.</h3>
+    <button id="btn"> click me</button>
+
+    <h3>This is mouse over.</h3>
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="smile.jfif" width="40px" height="40px">
+
+    <h3>Mouse move</h3>
+    <div onmousemove="xaxis(event)" onmouseout="clear()"></div>
+    <p id="coor"></p>
+
+    <h3>key up</h3>
+    Enter your name: <input type="text" id="fname" onkeyup="bold()">
+
+    <h3>dont write here </h3>
+    Enter your name: <input type="text" id="fname" onkeyup="bol()">
+
+    <p>choice options</p>
+    <br>
+    <select id="opt" onchange="tech()">
+    
+        <option value="a">A</option>
+        <option value="b">B</option>
+        <option value="c">C</option>
+        <option value="d">D</option>
+        <option value="e">E</option>
+    </select>
+
+    <p id="demo"></p>
+
+    <p id="a">Change to green</p>
+    <p>This line should be changed.</p>
+    <p id="color">Color</p>
+    <p id="font">Font</p>
+
+    <h3>The Window Object</h3>
+    <h3>The set Interval</h3>
+
+    <p id="demo1"></p>
+
+    <h3>The Set Timeout</h3>
+    <p id="Timeout"></p>
+
+    
+
+    <script>
+
+        x = fun(10, 5);
+        document.getElementById("emo").innerHTML = x;
+        function fun(a, b) {
+            return a * b;
+        }
+
+        x = fun1(10, 5);
+        document.getElementById("emo1").innerHTML = x;
+        function fun1(a, b) {
+            return a + b;
+        }
+
+        x = fun2(10, 5);
+        document.getElementById("emo2").innerHTML = x;
+        function fun2(a, b) {
+            return a - b;
+        }
+
+        x = fun3(10, 5);
+        document.getElementById("emo3").innerHTML = x;
+        function fun3(a, b) {
+            return a / b;
+        }
+
+        const q = new Function("a", "b", 'return a * b');
+        document.getElementById("emo5").innerHTML = q(20, 30);
+
+        const obj = {
+            first: "Vivek",
+            last: "Kumar",
+            full: function () {
+                return this.first + this.last;
+            }
+        }
+
+        document.getElementById("a").innerHTML = obj.full();
+        const arr = [10, 5, 9, 41, 6];
+        function maximum() {
+            let max = -Infinity;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        document.getElementById("b").innerHTML = maximum(arr);
+
+        function sumall() {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+
+            }
+            return sum;
+        }
+        document.getElementById("c").innerHTML = sumall();
+
+
+        const days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+        const d = new Date();
+        let day = days[d.getDay()];
+        document.getElementById("date").innerHTML = d.getTime();
+        document.getElementById("date1").innerHTML = d.getFullYear();
+        document.getElementById("date2").innerHTML = d.getMonth() + 1;
+        document.getElementById("date3").innerHTML = d.getMinutes();
+        document.getElementById("date4").innerHTML = d.getDate();
+        document.getElementById("date5").innerHTML = d.getDay();
+        document.getElementById("date6").innerHTML = day;
+
+        var text = "abcdjwdandladnfadsdbnn";
+        var str = "one ,two, three, four";
+        document.getElementById("aa").innerHTML = text.length;
+        document.getElementById("bb").innerHTML = str.slice(4, 9);
+        document.getElementById("cc").innerHTML = str.slice(-13, -7);
+        function replace() {
+            let t = document.getElementById("dd").innerHTML;
+            document.getElementById("dd").innerHTML = t.replace("replaceable", "replaced");
+        }
+
+        function upper() {
+            let t = document.getElementById("ee").innerHTML;
+            document.getElementById("ee").innerHTML = t.toUpperCase();
+        }
+
+
+        function get() {
+            document.getElementById("focus").focus();
+        }
+
+        function lose() {
+            document.getElementById("focus").blur();
+        }
+
+        const btn = document.getElementById("btn");
+        btn.addEventListener('click', function master() {
+            var master = document.getElementsByClassName("mas");
+            master[2].innerHTML = "i get the job."
+        })
+
+        function bold() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+
+        function bol() {
+            alert("Why are you entering.");
+        }
+
+        function tech(){
+            var x=document.getElementById("opt").value;
+            document.getElementById("demo").innerHTML="Value  is " + x;
+        }
+
+        document.getElementById("color").style.color = "red";
+        document.getElementById("font").style.fontFamily = "Arial";
+        document.getElementById("font").style.fontSize = "large";
+
+        const element = document.getElementById("demo1");
+        setInterval(function () { element.innerHTML += "JS" }, 1000);
+        const my=setTimeout(wish,5000);
+        function wish(){
+            document.getElementById("Timeout").innerHTML="All the Best";
+        }
+
+        function bigImg(x) {
+            x.style.height = "175px";
+            x.style.width = "175px"
+        }
+        function normalImg(x) {
+            x.style.height = "40px";
+            x.style.width = "40px"
+        }
+
+        function xaxis(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            var coor = "Coordinates: (" + x + "," + y + ")";
+            document.getElementById("coor").innerHTML = coor;
+        }
+
+
+        function clear() {
+            document.getElementById("coor").innerHTML = "";
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="ff"></p>
+    <button onclick="document.getElementById('f').innerHTML=get(1,20)">Random number</button>
+    <p id='f'></p>
+    <p id="ss">Not updated.</p>
+    <button type="button" onclick="basic()">Click Me</button>
+
+    <script>
+        document.getElementById("ff").innerHTML = Math.floor(Math.random() * 100);
+        function get(min, max) {
+            Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function basic() {
+            document.getElementById("ss").innerHTML = "Data is updated";
+        }
+
+    </script>
+
+</body>
+
+</html>

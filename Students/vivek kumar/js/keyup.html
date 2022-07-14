@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyup</title>
+</head>
+
+<body>
+
+    <h3>key up</h3>
+    Enter your name: <input type="text" id="fname" onkeyup="bold()">
+
+    <h3>dont write here </h3>
+    Enter your name: <input type="text" id="fname" onkeydown="bol()">
+
+    <p>choice options</p>
+    <br>
+    <select id="opt" onchange="tech()">
+    
+        <option value="a">A</option>
+        <option value="b">B</option>
+        <option value="c">C</option>
+        <option value="d">D</option>
+        <option value="e">E</option>
+    </select>
+
+    <p id="demo"></p>
+
+    <script>
+        function bold() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+
+        function bol() {
+            alert("Why are you entering.");
+        }
+
+        function tech(){
+            var x=document.getElementById("opt").value;
+            document.getElementById("demo").innerHTML="Value  is " + x;
+        }
+    </script>
+
+</body>
+
+</html>

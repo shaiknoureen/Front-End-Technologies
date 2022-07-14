@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+          width: 200px;
+          height: 100px;
+          border: 1px solid black;
+        }
+        </style>
+</head>
+
+<body>
+
+    <h3>This is mouse over.</h3>
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="smile.jfif" width="40px" height="40px">
+
+    <h3>Mouse move</h3>
+    <div onmousemove="xaxis(event)" onmouseout="clear()"></div>
+    <p id="coor"></p>
+    <script>
+        function bigImg(x) {
+            x.style.height = "175px";
+            x.style.width = "175px"
+        }
+        function normalImg(x) {
+            x.style.height = "40px";
+            x.style.width = "40px"
+        }
+
+        function xaxis(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            var coor = "Coordinates: (" + x + "," + y + ")";
+            document.getElementById("coor").innerHTML = coor;
+        }
+
+
+        function clear() {
+            document.getElementById("coor").innerHTML = "";
+        }
+    </script>
+
+</body>
+
+</html>
