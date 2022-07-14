@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+div {
+    width : 200px;
+    height: 100px;
+    border : 2px solid black;
+}
+</style>
+</head>
+<body>
+<div onmousemove="xaxis(event)" onmouseout="clearcoor()"></div>
+<p>seeing the x and y coordinates</p>
+<p id = "demo"></p>
+<script>
+function xaxis(e) {
+ var x = e.clientX;
+ var y = e.clientY;
+ var coor = "coordinates: ("+ x +","+ y +")";
+ document.getElementById("demo").innerHTML = coor;
+}
+function clearcoor() {
+ document.getElementById("demo").innerHTML="";
+}
+</script>
+</body>
+</html>

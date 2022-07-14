@@ -1,0 +1,20 @@
+<html>
+<body>
+<h2>change event</h2>
+<p>drop-down for the technologies stack</p>
+<select id = "options" onchange="tech()">
+<option value ="javascript">Javascript</option>
+<option value ="html">HTML</option>
+<option value ="css">CSS</option>
+<option value ="java">JAVA</option>
+<option value ="python">PYTHON</option>
+</select>
+<p id = "demo"></p>
+<script>
+function tech(){
+    var x =document.getElementById("options").value;
+    document.getElementById("demo").innerHTML = "you selected:" + x;
+}
+</script>
+</body>
+</html>

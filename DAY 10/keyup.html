@@ -1,0 +1,13 @@
+<html>
+<body>
+<h2>Key-up event</h2>
+<p>If you written something in the field it converts to upper text.</p>
+Enter your name : <input type = "text" id ="fname" onkeyup="bold()">
+<script>
+function bold() {
+ var x = document.getElementById("fname");
+ x.value = x.value.toUpperCase();
+}
+</script>
+</body>
+</html>
