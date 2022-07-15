@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charser="UTF-8">
+
+        <meta http-equiv="X-UV-Compatible" content="IE-edge">
+
+        <meta name="viewport" content="width=device-width,initial-scaled=1.0">
+
+ 
+
+        <title>document</title>
+
+    </head>
+
+    <body>
+        <script>
+            function clickCounter() {
+              if (typeof(Storage) !== "undefined") {
+                if (sessionStorage.clickcount) {
+                  sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                } else {
+                  sessionStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+              } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+              }
+            }
+            </script>
+
+        <p> let's discuss about Geo-location</p>
+
+        <button onclick="getlocation()">CLICK IT</button>
+
+        <p id="loc"></p>
+
+        <script>
+
+            var x=document.getElementById("loc");
+
+ 
+
+            function getlocation()
+
+            {
+
+            if(navigator.geolocation)
+
+            {
+
+                navigator.geolocation.getCurrentPosition(showposition);
+
+ 
+
+            }
+
+            else{
+
+                x.innerHTML="Geo-location is not supported on your device please upgrade the android";
+
+            }
+
+            }
+
+            function showposition(position)
+
+            {
+
+                x.innerHTML="Latitude:" +position .coords.latitude+"<br> longitude:" +position.coords.longitude;
+
+            }
+
+        </script>
+        
+            <
+                <style>
+                    #div1 {
+                      width: 350px;
+                      height: 70px;
+                      padding: 10px;
+                      border: 1px solid black;
+                    }
+                    </style>
+                    <body>
+                    <script>
+                    function allowDrop(ev) {
+                      ev.preventDefault();
+                    }
+                    
+                    function drag(ev) {
+                      ev.dataTransfer.setData("text", ev.target.id);
+                    }
+                    
+                    function drop(ev) {
+                      ev.preventDefault();
+                      var data = ev.dataTransfer.getData("text");
+                      ev.target.appendChild(document.getElementById(data));
+                    }
+                    </script>
+                    </head>
+                    <body>
+                    
+                <p>Drag the  images into the rectangle:</p>
+
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <br>
+                <img id="drag1" src="smiley.jfif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+                <img id="drag2" src="frock.jfif" draggable="true" ondragstart="drag(event)" width="336"  height="69">
+                <img id="drag3" src="tulip.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+                <img id="drag4" src="tree.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+                <script>
+                    function clickCounter() {
+                      if (typeof(Storage) !== "undefined") {
+                        if (sessionStorage.clickcount) {
+                          sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                        } else {
+                          sessionStorage.clickcount = 1;
+                        }
+                        document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+                      } else {
+                        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+                      }
+                    }
+                    </script>
+
+    </body>
+
+</html>
