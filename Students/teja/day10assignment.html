@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <style>
+            div{
+                height:100px;
+                width:200px;
+                border:2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <img onmouseover="bigImg(this)" onmouseout= "normalImg(this)"border="0",  src="smileemoji.jpg" alt="smiley" width="32" height="40">
+        <script>
+            function bigImg(x){
+                x.style.hight="175px";
+                x.style.width="175px";
+            }
+            function normalImg(x){
+                x.style.height="32px";
+                y.style.width="32px";
+            }
+        </script>
+        <p id="demo"></p>
+        <div onmousemove="xaxis(event)" onmouseout="clearcoor()"></div>
+        <p> see the x ans y coordinates</p>
+        <script>
+            function xaxis(e){
+                var x=e.clientX;
+                var y=e.clientY;
+            var coor="coordinates:("+ x +"," + y + ")";
+            document.getElementById("demo").innerHTML=coor;
+            }
+            function clearcoor(){
+                document.getElementById("demo").innerHTML="";
+            }
+        </script>
+        <h3>key up</h3>
+        Enter your name: <input type="text" id="fname" onkeyup="bold()">
+    
+        <h3>dont write here </h3>
+        Enter your name: <input type="text" id="fname" onkeydown="bol()">
+    
+        <p>choice options</p>
+        <br>
+        <select id="opt" onchange="tech()">
+        
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+            <option value="d">D</option>
+            <option value="e">E</option>
+        </select>
+    
+        <p id="demo"></p>
+    
+        <script>
+            function bold() {
+                var x = document.getElementById("fname");
+                x.value = x.value.toUpperCase();
+            }
+    
+            function bol() {
+                alert("Why are you entering.");
+            }
+    
+            function tech(){
+                var x=document.getElementById("opt").value;
+                document.getElementById("demo").innerHTML="Value  is " + x;
+            }
+        </script>
+        <h2>change event</h2>
+        <p>Drop down for the technologis stack </p>
+        <select id="option" onchange="tech()">
+        <option value="javascript">JAVASCRIPT</option>
+        <option value="HTML">HTML</option>
+        <option value="css">CSS</option>
+        <option value="java">JAVA</option>
+        <option value="python">PYTHON</option>
+        </select>
+        <p id="demo2"></p>
+        <script>
+            function tech(){
+               var x= document.getElementById("option").value;
+                document.getElementById("demo2").innerHTML="you selected:" + x; 
+            
+            }
+        </script>
+        <h2>validating css using javascript</h2>
+        <p>adding clors to the particular line:</p>
+        <h1 id="id1">javascript</h1>
+        <button type="button" onclick="document.getElementById('id1').style.color='red'">click me</button>
+        <p id="demo3">INTELLIPAAT</p>
+        <p id="demo4">INTELLIPAAT</p>
+        <script>
+            document.getElementById("demo3").style.color="red";
+            document.getElementById("demo4").style.FontFamily = "Arial";
+            document.getElementById("demo4").style.FontFamily = "medium";
+        </script>
+        <h1>window objects</h1>
+        <h2>setintevals() method</h2>
+        <p id="demo5"></p>
+        <script>
+            const element=document.getElementById("demo5");
+            setInterval(function(){element.innerHTML += "javascipt"},1000);
+        </script>
+        <h1>window objects</h1>
+        <h2>settimeout() method</h2>
+        <p id="demo6"></p>
+        <script>
+            const mytimeout=setTimeout(wishes,5);
+        function wishes(){
+            document.getElementById("demo6").innerHTML="all the best";
+        }
+        </script>
+
+    </body>
+</html>
