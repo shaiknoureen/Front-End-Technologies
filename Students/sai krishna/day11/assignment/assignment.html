@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>Assignment 11</title>
+        <marquee>Assignment-11</marquee>
+        <style>
+            #div1, #div2,#div3,#div4,#div5 {
+              width: 350px;
+              height: 70px;
+              padding: 10px;
+              border: 1px solid black;
+            }
+            marquee {
+                font-stretch: semi-condensed;
+                background-color: red;
+            }
+            </style>
+    </head>
+    <body>
+        <h2>Geo Location Example</h2>
+        <p>Click the button to get you cooridnates</p>
+        <button onclick="getLocation()">Try it</button>
+        <p id="demo"></p>
+        <script>
+            var x = document.getElementById("demo");
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }
+                else {
+                    x.innerHTML = "Geo Location is not supported by browser";
+                }
+            }
+            function showPosition(position) {
+                x.innerHTML = "Latitute: "+position.coords.latitude +
+                "<br>Longitude: "+position.coords.longitude;
+            }
+    </script>
+
+        <h2>Drag and Drop Example</h2>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br>
+        <img id="drag5" src="kohli.jpg" draggable="true" ondragstart="drag(event)" width="50" height="69">
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br>
+        <img id="drag2" src="dhoni.jfif" draggable="true" ondragstart="drag(event)" width="50" height="69">
+        <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br>
+        <img id="drag3" src="sachin.jfif" draggable="true" ondragstart="drag(event)" width="50" height="69">
+        <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br>
+        <img id="drag1" src="kevin.jfif" draggable="true" ondragstart="drag(event)" width="50" height="69">
+        <div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br>
+        <img id="drag4" src="smith.png" draggable="true" ondragstart="drag(event)" width="50" height="69">
+        <br>
+        <br>
+        <script>
+            function allowDrop(ev) {
+            ev.preventDefault();
+            }
+
+            function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+            }
+    </script>
+            <h2>Local Storage Example</h2>
+            <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+            <div id="result"></div>
+            <p>Click the button to see the counter increase.</p>
+            <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+            <script>
+                function clickCounter() {
+                  if (typeof(Storage) !== "undefined") {
+                    if (localStorage.clickcount) {
+                      localStorage.clickcount = Number(localStorage.clickcount)+1;
+                    } else {
+                      localStorage.clickcount = 1;
+                    }
+                    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+                  } else {
+                    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+                  }
+                }
+                </script>
+
+            <br>
+            <h2>Session Storage Example</h2>
+            <p><button onclick="clickCounter1()" type="button">Click me!</button></p>
+            <div id="result1"></div>
+            <p>Click the button to see the counter increase.</p>
+            <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+            <script>
+                function clickCounter1() {
+                  if (typeof(Storage) !== "undefined") {
+                    if (sessionStorage.clickcount) {
+                      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                    } else {
+                      sessionStorage.clickcount = 1;
+                    }
+                    document.getElementById("result1").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+                  } else {
+                    document.getElementById("result1").innerHTML = "Sorry, your browser does not support web storage...";
+                  }
+                }
+                </script>
+
+            <h2>Basic Jquery Example</h2>
+            <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <i>Hi</i>
+    <i>Sai Krishna</i>
+    <i>How are you?</i>
+    <button id="hidden">Hide It</button>
+    <button id="show">Show it</button>
+    <script>
+        $(document).ready(function() {
+          $("#hidden").click(function(){
+            $("i").hide();
+          });
+          $("#show").click(function () {
+            $("i").show();
+          });
+
+        });
+    </script>
+
+    </body>
+</html>

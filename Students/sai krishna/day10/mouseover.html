@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <img onmouseover = "bigPicture(this)" onmouseout="normalImg(this)" src = "kohli.jpg" alt = "Kohli" width="50" height ="50">
+        <p>This event gives an idea about mouseover and mouseout events</p>
+        <script>
+                function bigPicture(x) {
+                         x.style.height="100px";
+                         x.style.width="100px";
+                }
+                function normalImg(x){
+                    x.style.height="50px";
+                    x.style.width="50px";
+                }
+            </script>
+    </body>
+</html>
