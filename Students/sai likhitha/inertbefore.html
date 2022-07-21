@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("<span>how r u doing!</span>").insertBefore("p");
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Insert span element after each p element</button><br>
+
+<p>Hello folks.</p>
+<p>How are u?</p>
+
+</body>
+</html>
