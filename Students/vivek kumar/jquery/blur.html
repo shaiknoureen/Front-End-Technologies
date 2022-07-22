@@ -1,19 +1,24 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("input").blur(function () {
-                alert("hello!you are lost!")
+            $("button").click(function () {
+                $("#p1").after("<p>New liner added here</p>");
+                $("#p2").after("<p>Second New liner added here</p>");
             });
         });
     </script>
 </head>
 
 <body>
-    Enter your name : <input type="text">
-    <p>Write something in the field,then click outside you will the blur </p>
+
+    <button>Insert content after each p element</button>
+
+    <p id="p1">This is a paragraph.</p>
+    <p id="p2">This is another paragraph.</p>
 
 </body>
 

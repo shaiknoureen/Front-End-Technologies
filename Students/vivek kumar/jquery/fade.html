@@ -1,0 +1,48 @@
+<!-- <html>
+<head>
+<script src ="jquery.js"></script>
+<script>
+$(document).ready(function() {
+    $("button").click(function() {
+        $("#div1").fadeOut();
+        $("#div2").fadeOut("slow");
+        $("#div3").fadeOut(5000);
+    });
+});
+</script>
+</head>
+<body>
+    <p>lets see the fadein option</p>
+    <button>clck on this to check how it works</button>
+    <br>
+    <div id ="div1" style = "width:80px;height:80px;display:none;background-color: aqua;"></div><br>
+    <div id ="div2" style = "width:80px;height:80px;display:none;background-color: blueviolet;"></div><br>
+    <div id ="div3" style = "width:80px;height:80px;display:none;background-color: plum;"></div>
+
+</body>
+</html> -->
+
+
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".button1").click(function () {
+                $("p").hide();
+            });
+            $(".button2").click(function () {
+                $("p").show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p> hide and show is going to execute in the webpage</p>
+    <button class="button1">Hide</button>
+    <button class="button2">Show</button>
+</body>
+
+</html>
