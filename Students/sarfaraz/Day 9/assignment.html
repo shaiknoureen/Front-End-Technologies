@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+</head>
+<body>
+    <h2>If button is clicked then the content is displayed</h2>
+    <button type="button" onclick="myFunc()">Click here</button>
+    <p id="unique3"></p>
+    <h2>Windows Prompt</h2>
+    <button type="button" onclick="winPromp()">Click here</button>
+    <p id="unique1"></p>
+    <h2>Popup box</h2>
+    <button type="button" onclick="popUp()">Click here</button>
+    <p id="unique2"></p>
+    <p>Here we can perform multiple operations with the help of return</p>
+    <p id="unique4"></p>
+    <p>Working with json objects</p>
+    <p id="unique5"></p>
+    <script>
+        function winPromp(){
+            let text;
+            let person = prompt("Enter your name:")
+            if(person == null || person == "") {
+                text = "User cancelled the prompt";
+            } else {
+                text = "User has entered the details: " + person ;
+            }
+            document.getElementById("unique1").innerHTML = text;
+        }
+        function popUp(){
+            var text;
+            if(confirm("Press a button")) {
+                text = "OK!";
+            } else {
+                text = "Cancelled";
+            }
+            document.getElementById("unique2").innerHTML = text;
+        }
+        function myFunc(){
+            document.getElementById("unique3").innerHTML = "this text is from inside script function";
+        }
+        const localFunc = new Function("a", "b", "return a + b");
+        document.getElementById("unique4").innerHTML = localFunc("Hello", " this is Ahmad");
+        const myObj = {
+            firstName: "Ahmad",
+            lastName: "Sarfaraz",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        document.getElementById("unique5").innerHTML = myObj.fullName();
+
+    </script>
+</body>
+</html>

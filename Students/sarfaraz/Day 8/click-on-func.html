@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click On Function</title>
+</head>
+<body>
+    <h2>Behaviour of the code in the fucntion</h2>
+    <p>If button is clicked then the content is displayed</p>
+    <button type="button" onclick="myFunc()">Click here</button>
+    <p id="demo"></p>
+    <script>
+        function myFunc(){
+            document.getElementById("demo").innerHTML = "this text is from inside script function";
+        }
+    </script>
+</body>
+</html>

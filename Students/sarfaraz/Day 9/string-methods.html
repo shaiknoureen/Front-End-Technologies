@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+
+<body>
+    <p id="unique1"></p>
+    <p id="unique2">something, something...</p>
+    <script>
+        let text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium dolores vel rem ipsam sunt debitis iusto voluptatum doloremque? Velit quo inventore nostrum quae laboriosam! Ea nihil cupiditate nostrum dolorem laborum?";
+        document.getElementById("unique1").innerHTML = text.slice(6, 18);
+        function replace() {
+            let str = document.getElementById("unique2").innerHTML;
+            document.getElementById("unique2").innerHTML = str.replace("something", "anything").toLowerCase().concat("concating additional string");
+        }
+    </script>
+</body>
+
+</html>

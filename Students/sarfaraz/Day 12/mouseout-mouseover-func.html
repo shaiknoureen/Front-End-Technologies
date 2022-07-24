@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Move</title>
+    <script src="./jqeury-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("p").mouseout(function(event) {
+                $("p").css("background-color", "yellow");
+            });
+            $("p").mouseover(function(event) {
+                $("p").css("background-color", "red");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>This is first paragraph</p>
+</body>
+</html>

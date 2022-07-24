@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Declarations</title>
+</head>
+
+<body>
+    <p>Here we can perform multiple operations with the help of return</p>
+    <p id="unique1"></p>
+    <p id="unique2"></p>
+    <p id="unique3"></p>
+    <p id="unique4"></p>
+    <script>
+        var x = declaration1(4, 8);
+        document.getElementById("unique1").innerHTML = x;
+        function declaration1(a, b) {
+            return a * b;
+        }
+        var y = declaration2(4, 8);
+        document.getElementById("unique2").innerHTML = y;
+        function declaration2(a, b) {
+            return a + b;
+        }
+        var z = declaration3(4, 8);
+        document.getElementById("unique3").innerHTML = z;
+        function declaration3(a, b) {
+            return a / b;
+        }
+        var w = declaration4(4, 8);
+        document.getElementById("unique4").innerHTML = w;
+        function declaration4(a, b) {
+            return a * b;
+        }
+    </script>
+</body>
+
+</html>

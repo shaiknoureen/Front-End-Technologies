@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working on Date</title>
+</head>
+
+<body>
+    <p id="unique1"></p>
+    <p id="unique2"></p>
+    <script>
+        const date = new Date();
+        document.getElementById("unique1").innerHTML = date.getTime();
+        const weekDays = ["sudnay", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+        let day = days[date.getDay()];
+        document.getElementById("unique2").innerHTML = day;
+    </script>
+</body>
+
+</html>
