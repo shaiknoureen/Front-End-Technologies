@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=x, initial-scale=1.0">
+    <title>Input Tags</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div style="margin: 50px 80px;">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <h5 class="card-header">Register Form</h5>
+                    <div class="card-body">
+                        <form>
+                            <label for="name">Name</label><br>
+                            <input type="text" id="name" name="name"><br>
+                            <label for="pwd">Password</label><br>
+                            <input type="password" id="pwd" name="pwd"><br>
+                            <label for="birthday">DOB</label><br>
+                            <input type="date" id="birthday" name="birthday"><br>
+                            <input type="submit" value="submit">
+                            <input type="reset">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <h5 class="card-header">Radio Form</h5>
+                    <div class="card-body">
+                        <form>
+                            <input type="radio" id="heatblast" name="alien" value="heatblast"><br>
+                            <label for="heatblast">Heat Blast</label><br>
+                            <input type="radio" id="greymatter" name="alien" value="greymatter"><br>
+                            <label for="greymatter">Grey Matter</label><br>
+                            <input type="radio" id="waybig" name="alien" value="waybig"><br>
+                            <label for="waybig">Way Big</label><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <h5 class="card-header">Checkbox Form</h5>
+                    <div class="card-body">
+                        <form>
+                            <input type="checkbox" id="vehicle 1" name="luxury cars" value="car"><br>
+                            <label for="vehicle">I want to buy Rolls-Royce</label><br>
+                            <input type="checkbox" id="vehicle 2" name="racing bikes" value="bike"><br>
+                            <label for="vehicle">I want to buy Ducati</label><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <h5 class="card-header">Date Form</h5>
+                    <div class="card-body">
+                        <form>
+                            <label for="datemax">Enter the max date</label><br>
+                            <input type="date" id="datemax" name="datemax" max="2033-12-12"><br>
+                            <label for="datemin">Enter the min date</label><br>
+                            <input type="date" id="datemin" name="datemin" min="1033-01-01"><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <h5 class="card-header">File Upload Form</h5>
+            <div class="card-body">
+                <form>
+                    <p>Upload any files</p>
+                    <label for="myfile">Upload your file here</label>
+                    <input type="file" id="myfile" name="myfile"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

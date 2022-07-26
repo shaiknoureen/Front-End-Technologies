@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Location</title>
+</head>
+
+<body>
+    <p>This page is about Geo-Location</p>
+    <button onclick="getLocation()">Click to get your location</button>
+    <p id="location"></p>
+    <script>
+        var doc = document.getElementById("location");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                doc.innerHTML = "Geo-Location is not supported in this browser";
+            }
+        }
+
+        function showPosition(position) {
+            doc.innerHTML = "Latitude: " + position.coords.latitude + "<br> Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+
+</html>
