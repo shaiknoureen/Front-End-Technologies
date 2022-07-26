@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Jquery Example</title>
+<script src ="jquery-3.6.0.js"></script>
+<style>
+#paste {
+    padding :65 px 0;
+}
+</style>
+<script>
+    $(document).ready(function () {
+        $('textarea').on("cut",function (e) {
+            $("#d2").text('cut not allowed');
+              e.preventDefault();
+        });
+        $('textarea').on("paste",function (e) {
+            $("#d2").text('paste not allowed');
+              e.preventDefault();
+        });
+        $('textarea').on("copy",function (e) {
+            $("#d2").text('copy not allowed');
+              e.preventDefault();
+        });
+        $('textarea').mousedown(function(e){
+            if (e.button == 2) {
+                e.preventDefault();
+                alert("right-click is disabled");
+            }
+        });
+    });
+
+</script>
+
+</head>
+<body>
+<center>
+    <div id = "paste">
+        <h1 style = "color: blue;">Jquery class</h1>
+        <p id = "d1">this area won't allow you to cut,copy,paste this is an official page you dont have any rights to copy the content</p>
+        <textarea></textarea>
+        <p id = "d2" style="color: red;"></p>
+    
+    </div>
+</center>
+</body>
+</html>

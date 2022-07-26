@@ -1,0 +1,84 @@
+<html>
+<head>
+<script src = "jquery-3.6.0.js"></script>
+<script>
+$(document).ready(function () {
+    $("#myinput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#mytable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+});
+    });
+});
+</script>
+<style>
+table {
+    font-family : arial, sands-serif;
+    border-collapse: collapse;
+    width : 100%
+}
+td, th {
+    border :1px solid black;
+    text-align :left;
+    padding : 8px
+
+}
+tr:nth-child(odd){
+    background-color : #dddddd;
+}
+</style>    
+</head> 
+<body>
+<h2>filtering the table</h2>
+<p>search for firstname lastname from the table</p>
+<input id = "myinput" type = "text" placeholder = "search...">
+<br><br>
+<table>
+<thead>
+<tr>
+<th>firstname</th>
+<th>lastname</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody id = "mytable">
+<tr>
+<td>SAI</td>
+<td>LIKITTHA</td>
+<td>sai@ftd.com</td>
+</tr>
+<tr>
+<td>SAI</td>
+<td>LIKITTHA</td>
+<td>sai@ftd.com</td>
+</tr>
+<tr>
+<td>SAI</td>
+<td>KRISHNA</td>
+<td>krishna@ftd.com</td>
+</tr>
+<tr>
+<td>TEJA</td>
+<td>GOLLA</td>
+<td>teja@ftd.com</td>
+</tr>
+<tr>
+<td>SARFARAJ</td>
+<td>AHMAD</td>
+<td>sarfaraj@ftd.com</td>
+</tr>
+<tr>
+<td>ANGURAJ</td>
+<td>ANBARASU</td>
+<td>anguraj@ftd.com</td>
+</tr>
+<tr>
+<td>VIVEK</td>
+<td>KUMAR</td>
+<td>vivek@ftd.com</td>
+</tr>
+</tbody>
+</table>
+<p><b>Note:</b>data is filtered</p>
+</body>
+</html>

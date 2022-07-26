@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").removeAttr("style");
+    $("img").removeAttr("width", "500");
+    $("img").removeAttr("height","500");
+  });
+});
+</script>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+
+<p style="font-size:120%;color:red">This is a paragraph.</p>
+<p style="font-weight:bold;color:blue">This is another paragraph.</p>
+<img src="jquery.jpg" alt="jquery" width="500" height="500"><br>
+
+<button>Remove the style attribute from all p elements</button>
+
+</body>
+</html>
