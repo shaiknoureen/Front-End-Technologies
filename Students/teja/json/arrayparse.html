@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <h2>let see about array  parsing</h2>
+        <h3>adding the dummy context to see whether is there any difference in the array</h3>
+        <p id="demo"></p>
+        <script>
+            const person='{"name":"intellipaat","age" : "20","city":"newyark"}';
+        const obj = JSON.parse(person);
+        document.getElementById("demo").innerHTML=obj.name + "," +obj.age;
+        </script>
+    </body>
+</html>

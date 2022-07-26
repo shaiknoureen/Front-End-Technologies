@@ -1,0 +1,20 @@
+<html>
+<body>
+    <h2>lets see about Array Parsing</h2>
+    <h3>adding the dummy context to see whether is ther any difference in the array and the curly braces</h3>
+    <p id = "demo"></p>
+<script>
+const person = '{"name":"intellipaat","birth" : "22-07-1990","city":"new york"}';
+const obj = JSON.parse(person, function(key,value) {
+   if (key == "birth") {
+     return new Date(value);
+   } else {
+      return value;
+
+}
+});
+document.getElementById("demo").innerHTML = obj.name + ", "+obj.birth;
+
+</script>
+</body>
+</html>
