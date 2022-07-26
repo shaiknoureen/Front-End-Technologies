@@ -1,0 +1,23 @@
+<html>
+<head>
+<script src ="jquery-3.6.0.js"></script>
+<script>
+$(document).ready(function() {
+    $("button").click(function() {
+        $("#div1").fadeOut();
+        $("#div2").fadeOut("slow");
+        $("#div3").fadeOut(5000);
+    });
+});
+</script>
+</head>
+<body>
+    <p>lets see the fadein option</p>
+    <button>clck on this to check how it works</button>
+    <br>
+    <div id ="div1" style = "width:80px;height:80px;display:none;background-color: aqua;"></div><br>
+    <div id ="div2" style = "width:80px;height:80px;display:none;background-color: blueviolet;"></div><br>
+    <div id ="div3" style = "width:80px;height:80px;display:none;background-color: plum;"></div>
+
+</body>
+</html>

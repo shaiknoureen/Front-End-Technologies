@@ -1,0 +1,22 @@
+<html>
+    <head>
+    <script src = "jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("input").focus(function() {
+                $("span").css("display","inline").fadeOut(200);
+            });
+        });
+    </script>
+    <style>
+        span{
+            display: none;
+        }
+    </style>
+    </head>
+    <body>
+        <input>
+       <span>welcome to inout field</span>
+       <p>Click on the input field</p>
+    </body>
+</html>
