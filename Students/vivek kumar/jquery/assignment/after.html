@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After</title>
+    <script src="jquery.js"></script>
+
+    <style>
+        button {
+            display: inline-block;
+            padding: 0.35em 1.2em;
+            border: 0.1em solid #FFFFFF;
+            margin: 0 0.3em 0.3em 0;
+            border-radius: 0.12em;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            color:darkmagenta;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            color: #000000;
+            background-color: #FFFFFF;
+        }
+    </style>
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            $(".a").click(function () {
+                $("p").after("Added after .");
+            });
+
+            $(".b").click(function () {
+                $("p").append("<b>Appended Text . </b>");
+            });
+
+            $(".c").click(function () {
+                $("<span> <i>Inserted after .</i> </span>").insertAfter("p");
+            });
+
+            $(".d").click(function () {
+                $("p").appendTo("#append");
+            });
+
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <p id="sample">This is a sample text.</p>
+    <div id="append"><em>AppendTo</em></div>
+    <br>
+
+    <button class="a">after</button> <br> <br>
+    <button class="b">append </button> <br> <br>
+    <button class="c">insert after</button> <br> <br>
+    <button class="d">appendTo</button> <br> <br>
+
+
+
+</body>
+
+</html>

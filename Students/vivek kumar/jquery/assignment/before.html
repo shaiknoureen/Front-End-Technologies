@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before</title>
+    <Script src="jquery.js"> </Script>
+</head>
+<body>
+    <style>
+        button {
+            display: inline-block;
+            padding: 0.35em 1.2em;
+            border: 0.1em solid #FFFFFF;
+            margin: 0 0.3em 0.3em 0;
+            border-radius: 0.12em;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            color:darkmagenta;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            color: #000000;
+            background-color: #FFFFFF;
+        }
+    </style>
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            $(".a").click(function () {
+                $("p").before("Added before .");
+            });
+
+            $(".b").click(function () {
+                $("p").prepend("<b>Prepended Text . </b>");
+            });
+
+            $(".c").click(function () {
+                $("<span> <i>Inserted before .</i> </span>").insertBefore("p");
+            });
+
+            $(".d").click(function () {
+                $("p").prependTo("#prepend");
+            });
+
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <p id="sample">This is a sample text.</p>
+    <div id="prepend"><em>Prepend To </em></div>
+    <br>
+
+    <button class="a">before</button> <br> <br>
+    <button class="b">Prepend </button> <br> <br>
+    <button class="c">insert before</button> <br> <br>
+    <button class="d">prependTo</button> <br> <br>
+
+    <!-- append prepend after before appento preprendto insertafter insertbefore -->
+</body>
+</html>

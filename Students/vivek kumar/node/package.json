@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.18.1",
+    "mongodb": "^4.8.0",
+    "simple-node-logger": "^21.8.12"
+  },
+  "name": "vivek",
+  "version": "1.0.0",
+  "description": "learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vivek kumar",
+  "license": "ISC"
+}
