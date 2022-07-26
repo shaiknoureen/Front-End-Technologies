@@ -1,0 +1,63 @@
+<html>
+<head>
+<script src="jquery-3.6.0.js"></script>
+<script>
+$(documnet).ready(function(){
+$("#myinput").on("keyup",funcion(){
+var value = $(this).val().toLowerCase(){
+$(this).toggle(this).text().toLowerCase().indexOf((value)>-1)                    }
+});
+});
+<style>
+table{
+font-family:arial,sands-serif;
+border-collapse:collapse;
+width:100%
+}
+td,th{
+border : 1px solid black;
+text-align:left;
+padding : 8px;
+}
+tr:nth-child(even){
+background-color : red;
+}
+</style>
+</script>
+</head>
+<body>
+<h2>filtering the table</h2>
+<p> search for first name lastname from the table</p>
+<input id=""myinput" type="text" placeholder="search...">
+<br></br>
+<table>
+    <tr>
+        <td>first name</td>
+        <th>lastname</th>
+        <th>email</th>
+    </tr>
+<tr>
+<td>golla</td>
+<td>teja</td>
+<td>teja@ftdi.com</td>
+</tr>
+<tr>
+<td>sai</td>
+<td>likhitha</td>
+<td>sai@ftdi.com</td>
+</tr>
+<tr>
+<td>sai</td>
+<td>vivek</td>
+<td>vivek@ftdi.com</td>
+</tr>
+<tr>
+<td>sai</td>
+<td>krishna</td>
+<td>sai@ftdi.com</td>
+</tr>
+
+</table>
+<p><b>note:</b> data is filtered</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+<script src="jquery-3.6.0.js"></script>
+<script>
+$(document).ready(function(){
+$("input").keydown(function(event){
+$("input").css("background-color","pink");
+});
+$("input").keyup(function(){
+    $("input").css("background-color","yellow");
+});
+});
+</script>
+</head>
+<body>
+    ener ypur name:<input type="text">
+<p>enter data in input fild if you check keydown and keyup</p>
+</body>
+</html>
