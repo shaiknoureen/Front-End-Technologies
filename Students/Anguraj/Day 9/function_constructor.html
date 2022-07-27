@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <h2>Function Constructor</h2>
+        <p>Here we can perform multiple operations with help of return</p>
+        <p id = "demo"></p>
+        <script>
+            const myFunction = new Function("a","b","return a*b");
+            document.getElementById("demo").innerHTML = myFunction(12,12);
+        </script>
+    </body>
+</html>

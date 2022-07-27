@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h2>Function Argument Object</h2>
+        <p>Here we can perform multiple operations with help of return</p>
+        <p id = "demo"></p>
+        <script>
+            function sumeg(){
+                let sum=0;
+                for(let i = 0;i<arguments.length;i++){
+                    sum = sum + arguments[i];
+                }
+              return sum;
+            }
+            document.getElementById("demo").innerHTML = sumeg(4,5,6,23,1,2,3,)
+        </script>
+    </body>
+</html>

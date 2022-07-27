@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h2>Function Invokation</h2>
+        <p>Here we can perform multiple operations with help of return</p>
+        <p id = "demo"></p>
+        <script>
+            const x = {
+                firstName : "Anguraj",
+                lastName : "Anbu",
+                fullName : function() {
+                    return this.firstName + " " +this.lastName;
+                }
+            }
+            document.getElementById("demo").innerHTML = x.fullName();
+        </script>
+    </body>
+</html>
