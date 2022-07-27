@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <h2>Date Methods</h2>
+        <p id = "demo">Today is </p>
+        <script>
+            const d = new Date();
+            const days = ["sunday","moday","tuesday","wednesday","thursday","friday","saturday"];
+            let day = days[d.getDay()];
+            document.getElementById("demo").innerHTML += day;
+        </script>
+    </body>
+</html>

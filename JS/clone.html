@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").clone().appendTo("body");
+  });
+});
+</script>
+</head>
+<body>
+
+<p>i am going to be cloned</p>
+<p>me too.</p>
+<p>
+<img src="jquery.jpg" alt="jquery" width="284" height="213">
+</p>
+
+<button>Clone all p elements, and append them to the body element</button>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#likhita").after("<p>New liner added here</p>");
+                $("#likki").after("<p> New line added here in the secondpara</p>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button>Insert content after each p element</button>
+
+    <p id="likhita">This is a paragraph.</p>
+    <p id="likki">This is another paragraph.</p>
+
+</body>
+
+</html>

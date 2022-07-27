@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Day 11</title>
+        <style>
+            #div1, #div2,#div3,#div4,#div5 {
+              width: 350px;
+              height: 70px;
+              padding: 10px;
+              border: 1px solid black;
+            }
+            marquee {
+                font-stretch: semi-condensed;
+                background-color: red;
+            }
+            </style>
+    </head>
+    <body>
+        <h2>Drag and Drop Example</h2>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br>
+        <img id="drag5" src="fly.jpg" draggable="true" ondragstart="drag(event)" width="50" height="69">
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br>
+        <img id="drag2" src="flower.jfif" draggable="true" ondragstart="drag(event)" width="50" height="69">
+        <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br>
+        <img id="drag3" src="nemo.jfif" draggable="true" ondragstart="drag(event)" width="50" height="69">
+        <br>
+        <br>
+        <script>
+            function allowDrop(ev) {
+            ev.preventDefault();
+            }
+
+            function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+        <h2>Local Storage Example</h2>
+        <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+        <div id="result"></div>
+        <p>Click the button to see the counter increase.</p>
+        <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+        <script>
+            function clickCounter() {
+              if (typeof(Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                  localStorage.clickcount = Number(localStorage.clickcount)+1;
+                } else {
+                  localStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+              } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+              }
+            }
+            </script>
+
+        <br>
+        <h2>Session Storage Example</h2>
+        <p><button onclick="clickCounter1()" type="button">Click me!</button></p>
+        <div id="result1"></div>
+        <p>Click the button to see the counter increase.</p>
+        <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+        <br><br>
+        <script>
+            function clickCounter1() {
+              if (typeof(Storage) !== "undefined") {
+                if (sessionStorage.clickcount) {
+                  sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                } else {
+                  sessionStorage.clickcount = 1;
+                }
+                document.getElementById("result1").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+              } else {
+                document.getElementById("result1").innerHTML = "Sorry, your browser does not support web storage...";
+              }
+            }
+        </script>
+        <h2>Geo Location Example</h2>
+        <p>Click the button to get you cooridnates</p>
+        <button onclick="getLocation()">Try it</button>
+        <p id="demo"></p>
+        <script>
+            var x = document.getElementById("demo");
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }
+                else {
+                    x.innerHTML = "Geo Location is not supported by browser";
+                }
+            }
+            function showPosition(position) {
+                x.innerHTML = "Latitute: "+position.coords.latitude +
+                "<br>Longitude: "+position.coords.longitude;
+            }
+        </script>
+    </body>
+</html>

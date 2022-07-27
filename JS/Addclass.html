@@ -1,0 +1,25 @@
+<html>
+<head>
+<script src ="jquery-3.6.0.js"></script>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#second").addClass("intro");
+        });
+    });
+</script>
+<style>
+.intro{
+    font-size : 150%;
+    color : navy;
+}
+
+</style>
+</head>
+<body>
+    <h1>addclass structure</h1>
+    <p>first paragraph</p>
+    <p id = "second">second paragraph</p>
+    <button>click me</button>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h2>Function Argument Object</h2>
+        <p>Max of arguments 4, 6, 5 :</p>
+        <p id = "demo"></p>
+        <script>
+            function findmax(){
+                let max = -Infinity;
+                for(let i = 0;i<arguments.length;i++){
+                    if(arguments[i] > max){
+                        max = arguments[i];
+                    }
+                }
+              return max;
+            }
+            document.getElementById("demo").innerHTML = findmax(4,5,6)
+        </script>
+    </body>
+</html>
