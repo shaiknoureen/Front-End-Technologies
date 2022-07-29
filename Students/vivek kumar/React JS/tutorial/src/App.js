@@ -3,6 +3,10 @@ import './App.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { useState } from "react";
+import Timer from './useeffect';
+import Appp from './useref';
+// import Component1 from './usecontext';
+
 
 function App() {
 
@@ -24,7 +28,9 @@ function App() {
     <div>
       <Garage />
       <Football />
-
+      <Timer />
+      <Appp />
+      {/* <Component1 /> */}
     </div>
     
   );
